@@ -2,8 +2,10 @@
 {% block title %} Student Details{% endblock title %}
 
 {% block content %}
-<table id="myTable" class="table table-borderless my-4 hover"> <!--no border-->
-    <thead class="border-bottom fw-bold"> <!--bold text-->
+<table id="myTable" class="table table-borderless my-4 hover">
+    <!--no border-->
+    <thead class="border-bottom fw-bold">
+        <!--bold text-->
         <tr>
             <td>Full Name</td>
             <td>Mobile</td>
@@ -23,14 +25,14 @@
             <td style="text-align:center;">{{student.stud_code}}</td>
             <td style="text-align:center;">
                 <a href="{% url 'student_update' student.id %}" class="btn text-danger px-0">
-                <i class="fa-solid fa-pen-to-square"></i>
-            </a>
-            <form action="{% url 'student_delete' student.id %}" method="POST" class="d-inline">
-                {% csrf_token %}
-                <button type="submit" class="btn"> <i class="fa-solid fa-trash float-right"></i>
-                </button>
-            </form>
-        </td>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+                <form action="{% url 'student_delete' student.id %}" method="POST" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn"> <i class="fa-solid fa-trash float-right"></i>
+                    </button>
+                </form>
+            </td>
         </tr>
         {% endfor %}
     </tbody>
