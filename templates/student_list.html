@@ -7,8 +7,8 @@
         <!--bold text-->
         <tr>
             <td style="text-align:center;">Full Name</td>
-            <td style="text-align:center;">Mobile</td>
-            <!--<td style="text-align:center;">Student ID</td>-->
+            <!--<td style="text-align:center;">Mobile</td>-->
+            <td style="text-align:center;">Student ID</td>
             <td style="text-align:center;">
                 <a href="{% url 'student_insert' %}" class="btn btn-outline-success">
                     <i class="fa-solid fa-plus"></i> Add New
@@ -20,8 +20,8 @@
         {% for student in student_list %}
         <tr>
             <td style="text-align:center;">{{student.fullname}}</td>
-            <td style="text-align:center;">{{student.mobile}}</td>
-            <!--<td style="text-align:center;">{{student.stud_code}}</td>-->
+            <!--<td style="text-align:center;">{{student.mobile}}</td>-->
+            <td style="text-align:center;">{{student.stud_code}}</td>
             <td style="text-align:center;">
                 <a href="{% url 'student_update' student.id %}" class="btn text-danger px-0">
                     <i class="fa-solid fa-pen-to-square"></i>
